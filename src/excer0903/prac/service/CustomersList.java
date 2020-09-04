@@ -69,12 +69,12 @@ public class CustomersList {
 
 	public boolean editCustomer(int index){
 		if((index-1<0 || total < index) || customers  == null){
-			System.out.println("序号错误，修改失败！");
+			System.out.println("序号错误或用户列表不存在，修改失败！");
 			return  false;
 		}
 		else{
 			System.out.print("请输入用户姓名：");
-			String name =  cmu.readString(15,customers[index-1].getName());
+			String name =  CMUtility.readString(15,customers[index-1].getName());
 			System.out.print("请输入用户年龄：");
 			int age = cmu.readInt(customers[index-1].getAge());
 			System.out.print("请输入用户邮箱：");
