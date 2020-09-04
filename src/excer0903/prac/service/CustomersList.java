@@ -53,8 +53,8 @@ public class CustomersList {
 			System.out.print("确认是否删除(Y/N)：");
 			char c = cmu.readConfirmSelection();
 			if(c == 'Y'){
-				for(int i = index-1;i < total-1; i++){
-					customers[i] = customers[i+1];
+				for(int i = index-1;i < total-1; ){
+					customers[i] = customers[++i];
 				}
 				customers[--total] = null;
 				System.out.print("---------------------删除完成---------------------\n");
